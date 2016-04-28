@@ -1,0 +1,43 @@
+#include <iostream>
+#include <ctype.h>
+#include <stdlib.h>
+#include <cstring>
+#include <conio.c>
+ 
+int main (){
+	int b,a;
+    int valnum(char num [5]);
+    int sw;
+	char num [5];
+//	clrscr(); 
+ do{
+ 	
+ 	std :: cout << "primer numero \n" ;
+ 	std :: cin >> num;
+	int valnum (char num );
+	
+   }	while ( sw !=0); 
+    std:: cout << a;
+
+}
+int valnum (char num [5]){
+	int i, j, sw=0;
+	j= strlen(num);
+	while (sw == 0, i<j){
+		if (isdigit(num (i)!==0){
+		i++;
+		else
+		sw=1;
+		}
+	}
+  	return sw;
+}
+
+
+//	std :: cin >> b;
+//	if a or b not numeric :
+//	std::cout << "numero invalido"
+//	else 
+//		std :: cout << a+b;
+		
+	
