@@ -2,19 +2,19 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <cstring>
-#include <conio.c>
+#include <conio.h>
  
 int main (){
 	int b,a;
     int valnum(char num [5]);
     int sw;
 	char num [5];
-//	clrscr(); 
+	system("cls"); 
  do{
- 	
+ 	system("cls");
  	std :: cout << "primer numero \n" ;
  	std :: cin >> num;
-	int valnum (char num );
+	 valnum ( num );
 	
    }	while ( sw !=0); 
     std:: cout << a;
@@ -24,11 +24,11 @@ int valnum (char num [5]){
 	int i, j, sw=0;
 	j= strlen(num);
 	while (sw == 0, i<j){
-		if (isdigit(num (i)!==0){
+		if (isdigit(num [i])!=0)
 		i++;
 		else
 		sw=1;
-		}
+		
 	}
   	return sw;
 }
@@ -40,4 +40,3 @@ int valnum (char num [5]){
 //	else 
 //		std :: cout << a+b;
 		
-	
