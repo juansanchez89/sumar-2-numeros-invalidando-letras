@@ -1,42 +1,60 @@
+
 #include <iostream>
 #include <ctype.h>
 #include <stdlib.h>
 #include <cstring>
 #include <conio.h>
- 
+int valnum(char num [2]);
+
 int main (){
 	int b,a;
-    int valnum(char num [5]);
-    int sw;
-	char num [5];
-	system("cls"); 
- do{
+    int sw =1;
+	char num [2]; 
+
+while ( sw ==1) { // 1 para numero incorrecto 0 para correcto
  	system("cls");
- 	std :: cout << "primer numero \n" ;
+ 	std :: cout << "primer numero A de 3 caracteres  \n" ;
  	std :: cin >> num;
-	 valnum ( num );
-	
-   }	while ( sw !=0); 
-    std:: cout << a;
-
+	sw= valnum ( num ); //llamo a la funcion q verifica el numero 
+} 
+sw=1; //resetea sw
+a= atoi(num); //transforma de cadena a numero
+while ( sw ==1) {
+ 	system("cls");
+ 	std :: cout << "primer numero B de 3 caracteres \n" ;
+ 	std :: cin >> num;
+	sw= valnum ( num );
 }
-int valnum (char num [5]){
-	int i, j, sw=0;
-	j= strlen(num);
-	while (sw == 0, i<j){
-		if (isdigit(num [i])!=0)
-		i++;
-		else
-		sw=1;
-		
-	}
-  	return sw;
+b= atoi(num);
+system("cls");
+
+std:: cout << "numero A: "<< a; 
+std:: cout << "\n";
+std:: cout << "numero B: "<< b;
+std:: cout << "\n";
+std:: cout << "resultado de la suma =  " << a+b;
 }
 
 
-//	std :: cin >> b;
-//	if a or b not numeric :
-//	std::cout << "numero invalido"
-//	else 
-//		std :: cout << a+b;
+// funcion que verifica
+int valnum (char num [2]){ 
+	int i=0, j= strlen(num);
+	int sw=0;
+	if (j<=3){ //verifica el largo del numero
+  	  while (i<=j-1 & sw== 0 ){ // verifica caracter por caracter mientras q sw=0
+	  	if (isdigit(num [i])!=0) {//isdigit devuelve 0 si es letra
+	  	sw = 0;
+	  	i++;
+	     }else{
+	      sw=1; // si sw es 1 ya hay error cierra el ciclo y devuelve el 1 para volver a empezar
+		  i++;	
+	 	}
+	    }
+	     return sw;
+   }else{
+   	return sw=1;
+   }
+   
+}
+
 		
